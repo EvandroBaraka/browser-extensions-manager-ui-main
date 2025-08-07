@@ -39,5 +39,11 @@
     width: 90px;
     border-radius: 20px;
     font-size: 1.2em;
+    font-weight: 500;
     color: hsl(200, 60%, 99%);
+
+    &:hover {
+        background-color: hsl(3, 86%, 64%);
+        color: hsl(225, 23%, 24%);
+    }
 }
