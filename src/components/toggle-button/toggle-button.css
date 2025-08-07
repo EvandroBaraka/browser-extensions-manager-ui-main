@@ -1,0 +1,33 @@
+.check {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    background-color: #777;
+    width: 40px;
+    height: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    transition: all 0.5s ease-in-out;
+}
+
+.check:checked ~ .switch {
+    background-color: hsl(3, 86%, 64%);
+}
+
+.check:checked ~ .switch .slider {
+    transform: translateX(19px);
+}
