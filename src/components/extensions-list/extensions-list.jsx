@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ThemeContext } from '../../contexts/themeContext'
 import extensionsData from '../../../data.json'
 import FilterButtons from '../filter-buttons/filter-buttons'
 import ExtensionCard from '../extension-card/extension-card'
@@ -7,6 +8,7 @@ import './extensions-list.css'
 const ExtensionsList = () => {
     const [extensions, setExtensions] = useState(extensionsData)
     const [filter, setFilter] = useState('all')
+    const { theme } = useContext(ThemeContext)
 
     let filteredExtensions;
     if(filter === 'active') {
@@ -25,7 +27,7 @@ const ExtensionsList = () => {
         <section className="container">
             <div className="list-header">
                 <h2>Extensions List</h2>
-                <FilterButtons changeFilter={changeFilter} filter={filter} />
+                <FilterButtons changeFilter={changeFilter} filter={filter} theme={theme}/>
             </div>
 
             <div className="list-container">

@@ -5,24 +5,50 @@
     font-size: 1.3em;
 }
 
-.filters button{
+.filters .filter-button {
     font-size: 1.2em;
     width: auto;
     padding: 5px 18px;
     margin: 5px;
     border-radius: 25px;
-    background-color: hsl(225, 23%, 24%);
-    border: solid 1px hsl(226, 11%, 37%);
-    color: hsl(200, 60%, 99%);
     cursor: pointer;
 
-    &:hover {
-        background-color: hsl(226, 11%, 37%);
+    &.dark {
+        background-color: hsl(225, 23%, 24%);
+        border: solid 1px hsl(226, 11%, 37%);
+        color: hsl(200, 60%, 99%);
+
+        &:hover {
+            background-color: hsl(226, 11%, 37%);
+        }
+
+        &.selected {
+            background-color: hsl(3, 86%, 64%);
+            color: hsl(225, 23%, 24%);
+
+            &:hover {
+                background-color: hsl(3, 71%, 56%);
+            }
+        }
     }
-    
-    &.selected {
-        background-color: hsl(3, 86%, 64%);
-        color: hsl(225, 23%, 24%);
+
+    &.light {
+        background-color: hsl(200, 60%, 99%);
+        border: solid 1px hsl(0, 0%, 78%);
+        color: hsl(227, 75%, 14%);
+
+        &:hover {
+            background-color: hsl(0, 0%, 93%);
+        }
+
+        &.selected {
+            background-color: hsl(3, 86%, 64%);
+            color: hsl(200, 60%, 99%);
+
+            &:hover {
+                background-color: hsl(3, 71%, 56%);
+            }
+        }
     }
 }
 

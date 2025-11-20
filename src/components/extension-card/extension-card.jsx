@@ -1,19 +1,23 @@
 import './extension-card.css'
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/themeContext'
 import ToggleButton from '../toggle-button/toggle-button'
 
 const ExtensionCard = ({ logo, name, description, isActive, setExtensions }) => {
+    const { theme } = useContext(ThemeContext)
+
     return (
-        <div className='extension-card'>
+        <div className={`extension-card ${theme}`}>
             <div className="card-data">
                 <img className='logo' src={logo} alt='Logo' />
                 <div className='extension-data'>
                     <h1>{name}</h1>
-                    <p>{description}</p>
+                    <p className={`${theme}`}>{description}</p>
                 </div>
             </div>
 
             <div className='card-controls'>
-                <button className='button-remove' >Remove</button>
+                <button className={`button-remove ${theme}`}>Remove</button>
                 <ToggleButton id={name} isActive={isActive} setExtensions={setExtensions} />
             </div>
         </div>

@@ -5,12 +5,20 @@
     margin: 5px;
     padding: 12px 18px 18px;
     border-radius: 15px;
-    background-color: hsl(226, 25%, 17%);
-    border: solid 1px hsl(226, 11%, 37%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 0.9em;
+
+    &.light {
+        background-color: hsl(200, 60%, 99%);
+        border: solid 1px hsl(0, 0%, 78%);
+    }
+
+    &.dark {
+        background-color: hsl(226, 25%, 17%);
+        border: solid 1px hsl(226, 11%, 37%);
+    }
 }
 
 .card-data {
@@ -20,11 +28,18 @@
 }
 
 .extension-data h1 {
+    font-size: 1.5em;
     margin-bottom: 5px;
 }
 
 .extension-data p {
-    color: hsl(0, 0%, 78%);
+    &.dark {
+        color: hsl(0, 0%, 78%);
+    }
+
+    &.light {
+        color: hsl(226, 11%, 37%);
+    }
 }
 
 .card-controls {
@@ -34,16 +49,31 @@
 }
 
 .button-remove {
-    background-color: hsl(226, 25%, 17%);
-    border: solid 1px hsl(226, 11%, 37%);
     width: 90px;
     border-radius: 20px;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: hsl(200, 60%, 99%);
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 5px 0px;
 
-    &:hover {
-        background-color: hsl(3, 86%, 64%);
-        color: hsl(225, 23%, 24%);
+    &.dark {
+        background-color: hsl(226, 25%, 17%);
+        border: solid 1px hsl(226, 11%, 37%);
+        color: hsl(200, 60%, 99%);
+
+        &:hover {
+            background-color: hsl(3, 86%, 64%);
+            color: hsl(225, 23%, 24%);
+        }
+    }
+
+    &.light {
+        background-color: hsl(200, 60%, 99%);
+        border: solid 1px hsl(0, 0%, 78%);
+        color: hsl(227, 75%, 14%);
+
+        &:hover {
+            background-color: hsl(3, 77%, 44%);
+            color: hsl(200, 60%, 99%);
+        }
     }
 }

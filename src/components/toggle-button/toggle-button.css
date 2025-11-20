@@ -25,7 +25,21 @@
 }
 
 .check:checked ~ .switch {
-    background-color: hsl(3, 86%, 64%);
+    &.dark {
+        background-color: hsl(3, 86%, 64%);
+
+        &:hover {
+            background-color: hsl(3, 77%, 44%);
+        }
+    }
+
+    &.light {
+        background-color: hsl(3, 77%, 44%);
+
+        &:hover {
+            background-color: hsl(3, 71%, 56%);
+        }
+    }
 }
 
 .check:checked ~ .switch .slider {
