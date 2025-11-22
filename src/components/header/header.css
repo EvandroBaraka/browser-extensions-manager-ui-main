@@ -7,7 +7,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    
+
     &.dark {
         background-color: hsl(226, 25%, 17%);
     }
@@ -52,5 +52,11 @@ header {
         &:hover {
             background-color: hsl(0, 0%, 78%);
         }
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        margin-bottom: 0;
     }
 }

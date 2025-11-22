@@ -58,3 +58,15 @@
     flex-wrap: wrap;
     list-style: none;
 }
+
+@media (max-width: 750px) {
+    .list-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .filters .filter-button {
+        font-size: 1em;
+    }
+}

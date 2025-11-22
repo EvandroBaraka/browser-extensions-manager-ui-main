@@ -23,3 +23,9 @@ main.light {
     background-color: hsl(217, 61%, 90%);
     color: hsl(227, 75%, 14%);
 }
+
+@media (max-width: 750px) {
+    main {
+        padding: 20px 10px;
+    }
+}
