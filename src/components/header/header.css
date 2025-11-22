@@ -38,7 +38,7 @@ header {
 
     &.dark {
         background-color: hsl(225, 23%, 24%);
-        background-image: url(../../assets/images/icon-sun.svg);
+        background-image: url(assets/images/icon-sun.svg);
 
         &:hover {
             background-color: hsl(226, 11%, 37%);
@@ -47,7 +47,7 @@ header {
 
     &.light {
         background-color: hsl(0, 0%, 93%);
-        background-image: url(../../assets/images/icon-moon.svg);
+        background-image: url(assets/images/icon-moon.svg);
 
         &:hover {
             background-color: hsl(0, 0%, 78%);

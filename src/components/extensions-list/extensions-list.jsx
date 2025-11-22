@@ -23,6 +23,10 @@ const ExtensionsList = () => {
         setFilter(e.target.id)
     }
 
+    const removeExtension = (id) => {
+        setExtensions(prev => prev.filter(extension => extension.name !== id))
+    }
+
     return(
         <section className="container">
             <div className="list-header">
@@ -40,7 +44,8 @@ const ExtensionsList = () => {
                                 name={extension.name}
                                 description={extension.description}
                                 isActive={extension.isActive} 
-                                setExtensions={setExtensions} />
+                                setExtensions={setExtensions} 
+                                removeExtension={removeExtension}/>
                         </li>)
                     })}
                 </ul>

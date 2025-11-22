@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/themeContext'
 import ToggleButton from '../toggle-button/toggle-button'
 
-const ExtensionCard = ({ logo, name, description, isActive, setExtensions }) => {
+const ExtensionCard = ({ logo, name, description, isActive, setExtensions, removeExtension }) => {
     const { theme } = useContext(ThemeContext)
 
     return (
@@ -17,7 +17,7 @@ const ExtensionCard = ({ logo, name, description, isActive, setExtensions }) => 
             </div>
 
             <div className='card-controls'>
-                <button className={`button-remove ${theme}`}>Remove</button>
+                <button className={`button-remove ${theme}`} onClick={() => removeExtension(name)}>Remove</button>
                 <ToggleButton id={name} isActive={isActive} setExtensions={setExtensions} />
             </div>
         </div>
