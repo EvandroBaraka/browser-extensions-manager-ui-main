@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+*:focus {
+    outline: 2px solid hsl(3, 71%, 56%);
+    outline-offset: 2px;
+}
+
 main {
     font-family: "Noto Sans";
     min-height: 100vh;

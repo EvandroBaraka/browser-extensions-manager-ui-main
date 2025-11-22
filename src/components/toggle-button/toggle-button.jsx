@@ -18,7 +18,7 @@ const ToggleButton = ({ id, isActive, setExtensions }) => {
     return (
         <>
             <input type="checkbox" className='check' id={id} checked={isActive} onChange={handleToggle} />
-            <label htmlFor={id} className={`switch ${theme}`}>
+            <label htmlFor={id} className={`switch ${theme}`} tabIndex={0}>
                 <span className="slider"></span>
             </label>
         </>
